@@ -132,6 +132,21 @@
           "legendFormat": "Power generation (PV)",
           "range": true,
           "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "ac_output_active_power{instance=\"anern_monitoring:8081\"} / 60 / 1000 - pv_power{instance=\"anern_monitoring:8081\"}  / 60 / 1000",
+          "format": "time_series",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "Difference",
+          "range": true,
+          "refId": "C"
         }
       ],
       "title": "Power usage vs generation",
@@ -449,13 +464,13 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Power monitoring",
   "uid": "l2a2zy04k",
-  "version": 11,
+  "version": 14,
   "weekStart": ""
 }
