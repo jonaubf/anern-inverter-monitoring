@@ -207,7 +207,9 @@
       "interval": "1m",
       "options": {
         "legend": {
-          "calcs": [],
+          "calcs": [
+            "lastNotNull"
+          ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
@@ -225,7 +227,7 @@
           },
           "editorMode": "builder",
           "expr": "ac_output_active_power{instance=\"anern_monitoring:8081\"}",
-          "legendFormat": "Power consumption",
+          "legendFormat": "Power load",
           "range": true,
           "refId": "A"
         },
@@ -242,7 +244,7 @@
           "refId": "B"
         }
       ],
-      "title": "Power consumption vs generation",
+      "title": "Power load vs generation",
       "type": "timeseries"
     },
     {
@@ -314,7 +316,9 @@
       "interval": "1m",
       "options": {
         "legend": {
-          "calcs": [],
+          "calcs": [
+            "lastNotNull"
+          ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
@@ -409,7 +413,9 @@
       "interval": "1m",
       "options": {
         "legend": {
-          "calcs": [],
+          "calcs": [
+            "lastNotNull"
+          ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
@@ -440,32 +446,16 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": [
-      {
-        "current": {},
-        "definition": "",
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "query0",
-        "options": [],
-        "query": "",
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "type": "query"
-      }
-    ]
+    "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Power monitoring",
   "uid": "l2a2zy04k",
-  "version": 6,
+  "version": 11,
   "weekStart": ""
 }
